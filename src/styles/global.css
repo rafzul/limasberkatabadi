@@ -1,0 +1,12 @@
+/* ./styles/tailwind.css*/
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .stroke-helper {
+      @apply border-2 border-pink-700
+    }
+}
