@@ -1,9 +1,23 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
 
-export default function Navbar() {
+const Navbar = () => {
+    const [showLink, setShowLink] = useState(false);
+
+    const toggleLink = () => {
+        setShowLink(!showLink);
+    }
+
     return (
-    <nav className="stroke-helper flex w-full z-10 p-2 bg-transparent">
-    </nav>
+        <header className="stroke-helper flex flex-wrap flex-row justify-between md:items-center bg-gray-300 py-6 px-6 h-24">
+            <a href='#' className='block w-24 h-24'>
+                <img className='' src="https://user-images.githubusercontent.com/61845166/153700558-98e80452-24a1-42b3-89c8-9d70fb6e0798.png"></img>
+            </a>
+        </header>
+
+
     )
 }
+
+export default Navbar;
